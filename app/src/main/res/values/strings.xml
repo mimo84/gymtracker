@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">GymTraker</string>
+    <string name="exercise_name">Exercise Name</string>
+</resources>
