@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">GymTraker</string>
+    <string name="exercise_name">Nome Esercizio</string>
+    <string name="settings">Impostazioni</string>
+    <string name="preferences_dark_theme">Usa tema "Dark"</string>
+    <string name="preferences_dark_theme_summary">Un tema diverso, scuro piuttosto che chiaro. (Non ancora funzionante)</string>
+</resources>

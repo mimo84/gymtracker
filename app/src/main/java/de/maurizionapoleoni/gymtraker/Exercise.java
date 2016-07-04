@@ -1,13 +1,7 @@
 package de.maurizionapoleoni.gymtraker;
 
-/**
- * Created by maurizionapoleoni on 4/07/2016.
- */
+
 public class Exercise {
-
-
-
-
 
     private long id;
     private String exercise;

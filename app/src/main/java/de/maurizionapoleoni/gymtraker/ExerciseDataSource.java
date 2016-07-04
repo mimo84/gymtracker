@@ -10,9 +10,7 @@ import android.util.Log;
 import java.util.ArrayList;
 import java.util.List;
 
-/**
- * Created by maurizionapoleoni on 4/07/2016.
- */
+
 public class ExerciseDataSource {
 
     private SQLiteDatabase database;
@@ -79,6 +77,7 @@ public class ExerciseDataSource {
         exercise.setExercise(cursor.getString(1));
         return exercise;
     }
+
 
 
 }

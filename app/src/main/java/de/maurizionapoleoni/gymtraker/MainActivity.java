@@ -1,8 +1,10 @@
 package de.maurizionapoleoni.gymtraker;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
-import android.util.Log;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
@@ -40,11 +42,6 @@ public class MainActivity extends AppCompatActivity {
                 AddExerciseDialog exerciseDialog = new AddExerciseDialog();
                 // How do you use a lambda expression here?
                 exerciseDialog.showDialog(this, view, (newExer) -> {
-                     Log.d("LAMBDA", newExer);
-
-//                    String[] exercises = new String[] { "Cool", "Very nice", "Hate it" };
-//                    int nextInt = new Random().nextInt(3);
-//                    // save the new exercise to the database
                     Exercise exercise = exerciseDataSource.createExercise(newExer);
                     adapter.add(exercise);
                 });
@@ -59,6 +56,31 @@ public class MainActivity extends AppCompatActivity {
                 break;
         }
         adapter.notifyDataSetChanged();
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        int id = item.getItemId();
+
+        switch (id) {
+            case R.id.action_settings: {
+                Intent intent = new Intent(this, PreferencesActivity.class);
+                startActivity(intent);
+                break;
+            }
+
+
+
+        }
+
+        return super.onOptionsItemSelected(item);
+    }
+
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        getMenuInflater().inflate(R.menu.settings_menu, menu);
+        return super.onCreateOptionsMenu(menu);
     }
 
 
